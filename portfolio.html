@@ -427,29 +427,46 @@
       </section>
       <section
         id="projects-section"
-        class="w-11/12 h-auto flex justify-start items-start flex-col rounded-lg mt-32 pb-8"
+        class="w-11/12 h-auto flex justify-center items-center flex-col rounded-lg mt-32 pb-8"
       >
         <h2 class="text-center w-full text-5xl text-teal-400 mb-14">PROJECTS</h2>
-        <div
-          id="project-card"
-          class="md:h-80 h-80 w-2/5 border-gray-700 flex flex-col bg-gradient-to-t from-gray-950 to-gray-800 p-3 rounded-lg"
-        >
-          <div id="image-container" class="relative h-full w-full border border-gray-300 flex">
+        <div id="card-containers" class="h-auto w-3/4 justify-center items-start flex flex-row">
+          <!-- Project card -->
+          <div
+            id="project-card"
+            class="relative h-auto w-full border-gray-700 flex flex-col border border-teal-300 hover:bg-gradient-to-t from-gray-950 to-gray-800 p-7 rounded-lg"
+          >
+            <div
+              id="filter"
+              class="absolute inset-0 bg-teal-600 opacity-30 transition-opacity duration-300 hover:opacity-0 z-40 rounded-lg"
+            ></div>
             <a
-              class="absolute -right-5 -top-5 bg-sky-800 bg-opacity-30 hover:bg-opacity-0 h-6 w-6 flex cursor-pointer rounded-full border border-sky-800"
+              href="https://github.com/Lusanco/PalitasPR"
+              class="absolute right-1 top-1 bg-teal-600 bg-opacity-30 hover:bg-gray-900 hover:bg-opacity-80 h-6 w-6 flex cursor-pointer shadow-sm shadow-black hover:shadow-none rounded-full border border-teal-700 z-50"
             >
               <img
                 src="/Web-Portfolio/static/svgs/arrow-link.svg"
                 alt=""
-                class="w-full h-full rounded-full shadow shadow-gray-800 hover:shadow-sky-200 opacity-40 hover:opacity-100 transition duration-150 ease-in-out"
+                class="w-full h-full rounded-full shadow shadow-gray-800 hover:shadow-amber-500 opacity-100 hover:opacity-80 transition duration-150 ease-in-out"
               />
             </a>
-            <img src="/Web-Portfolio/static/images/PalitasPRLanding.png" alt="" class="object-cover w-full h-full" />
-            <div class="absolute w-3/5 h-1/4 -bottom-10 -right-20 bg-gray-800 rounded-lg flex flex-row"></div>
+            <div
+              id="image-container"
+              class="relative h-full w-full border border-teal-300 flex rounded-lg overflow-hidden"
+            >
+              <img src="/Web-Portfolio/static/images/PalitasPRLanding.png" alt="" class="w-full h-full" />
+            </div>
           </div>
-          <!-- <div id="project-info-container" class="h-2/5 w-3/4 border-2 border-gray-400 mb-4">
-            <p>project infoo details</p>
-          </div> -->
+          <!-- Project Info -->
+          <div id="project-info" class="relative h-auto w-full flex flex-col justify-center items-start rounded-lg">
+            <h3
+              id="project-title"
+              class="w-auto text-2xl text-left text-gray-300 ml-4 bg-teal-950 border border-teal-400/10 rounded-lg px-3 py-1"
+            >
+              PalitasPR
+            </h3>
+          </div>
+          >
         </div>
       </section>
     </main>
