@@ -430,11 +430,14 @@
         class="w-11/12 h-auto flex justify-center items-center flex-col rounded-lg mt-32 pb-8"
       >
         <h2 class="text-center w-full text-5xl text-teal-400 mb-14">PROJECTS</h2>
-        <div id="card-containers" class="h-auto w-3/4 justify-center items-start flex flex-row">
+        <div
+          id="cards-container"
+          class="h-auto w-full md:w-3/4 justify-center items-center flex md:flex-row flex-col gap-8"
+        >
           <!-- Project card -->
           <div
             id="project-card"
-            class="relative h-auto w-full border-gray-700 flex flex-col border border-teal-300 hover:bg-gradient-to-t from-gray-950 to-gray-800 p-7 rounded-lg"
+            class="relative h-auto w-full md:w-64 border-gray-700 flex flex-col border border-teal-300 hover:bg-gradient-to-t from-gray-950 to-gray-800 p-3 rounded-lg"
           >
             <div
               id="filter"
@@ -454,19 +457,45 @@
               id="image-container"
               class="relative h-full w-full border border-teal-300 flex rounded-lg overflow-hidden"
             >
-              <img src="/Web-Portfolio/static/images/PalitasPRLanding.png" alt="" class="w-full h-full" />
+              <img src="/Web-Portfolio/static/images/PalitasPRLanding.png" alt="" class="w-full h-full object-cover" />
             </div>
+            <ul
+              id="tech-stacks-container"
+              class="w-full md:w-4/5 h-auto flex justify-start items-start gap-2 flex-wrap mt-2"
+            >
+              <li
+                class="w-auto h-auto text-xs text-gray-300 rounded-lg px-2 py-1 bg-teal-600 bg-opacity-30 flex cursor-pointer shadow-sm shadow-black border border-teal-700 z-50"
+              >
+                Python
+              </li>
+              <li class="w-auto h-auto text-xs bg-teal-950 text-gray-300 rounded-lg px-2 py-1">Flask</li>
+              <li class="w-auto h-auto text-xs bg-teal-950 text-gray-300 rounded-lg px-2 py-1">JavaScript</li>
+              <li class="w-auto h-auto text-xs bg-teal-950 text-gray-300 rounded-lg px-2 py-1">Svelte</li>
+              <li class="w-auto h-auto text-xs bg-teal-950 text-gray-300 rounded-lg px-2 py-1">HTML</li>
+              <li class="w-auto h-auto text-xs bg-teal-950 text-gray-300 rounded-lg px-2 py-1">CSS</li>
+              <li class="w-auto h-auto text-xs bg-teal-950 text-gray-300 rounded-lg px-2 py-1">TailwindCSS</li>
+              <li class="w-auto h-auto text-xs bg-teal-950 text-gray-300 rounded-lg px-2 py-1">AWS</li>
+              <li class="w-auto h-auto text-xs bg-teal-950 text-gray-300 rounded-lg px-2 py-1">PostgreSQL</li>
+            </ul>
           </div>
           <!-- Project Info -->
-          <div id="project-info" class="relative h-auto w-full flex flex-col justify-center items-start rounded-lg">
-            <h3
-              id="project-title"
-              class="w-auto text-2xl text-left text-gray-300 ml-4 bg-teal-950 border border-teal-400/10 rounded-lg px-3 py-1"
-            >
-              PalitasPR
-            </h3>
-          </div>
+          <div
+            id="project-info"
+            class="relative h-auto w-full md:w-1/2 flex flex-col justify-center items-start rounded-lg gap-2"
           >
+            <h3 id="project-title" class="w-auto text-xl text-left text-gray-300 rounded-lg mb-1 ml-4">PalitasPR</h3>
+            <p class="text-gray-300 ml-4 text-sm">
+              <span>Description: </span>Service platform to offer or request services publicly or private. Allow users
+              to see profiles, work done, and track jobs with clients.
+            </p>
+            <p class="text-gray-300 ml-4"><span>Role: </span>Cloud Architect, Backend Developer</p>
+            <p class="text-gray-300 ml-4 text-sm">
+              Designed REST API on Flask, database relationships on PostgreSQL with sqlAlchemy, created AWS management
+              backend functions to allow communication between Flask server, EC2 server and S3 bucket. Created EC2, RDS,
+              S3Bucket, load balancer and hosted the app on the EC2. Helped in mantaining workflow on Svelte, by
+              correctly accesing data from the API and passing it correctly to the Svelte components.
+            </p>
+          </div>
         </div>
       </section>
     </main>
