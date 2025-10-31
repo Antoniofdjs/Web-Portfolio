@@ -1,0 +1,14 @@
+@import "tailwindcss";
+@plugin "daisyui";
+
+/* 🎨 Customize the built-in light theme */
+@plugin "daisyui/theme" {
+  name: "aqua";     /* customizing existing light theme */
+  default: true;     /* make it the default */
+
+  /* DaisyUI theme variables */
+  --color-primary: #0077b6;   
+  --color-secondary: #708090; /* slate grey */
+  --color-accent: #fb8500;    /* orange*/
+  --color-base-100: #0077b6; /*blue*/
+}
