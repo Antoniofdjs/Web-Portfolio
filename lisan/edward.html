@@ -7,7 +7,6 @@
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Metropolis:wght@600;700;800&amp;display=swap" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
 <script id="tailwind-config">
         tailwind.config = {
             darkMode: "class",
@@ -114,14 +113,36 @@
 <nav class="hidden md:flex gap-8 items-center">
 <a class="font-label-caps text-label-caps text-secondary hover:text-primary transition-colors" href="#">Installations</a>
 <a class="font-label-caps text-label-caps text-primary border-b-2 border-primary pb-1" href="#">Portfolio</a>
-<a class="font-label-caps text-label-caps text-secondary hover:text-primary transition-colors" href="#">Process</a>
 <a class="font-label-caps text-label-caps text-secondary hover:text-primary transition-colors" href="#">Materials</a>
 </nav>
+<div class="flex items-center gap-4">
 <button class="bg-primary text-on-primary font-label-caps text-label-caps px-4 md:px-8 py-2 md:py-3 hover:bg-surface-container-low hover:text-primary border border-primary transition-all duration-200">
-                Contact Us
-            </button>
+        Contact Us
+    </button>
+<!-- Hamburger Button (Mobile Only) -->
+<button aria-label="Toggle Menu" class="md:hidden flex items-center p-2 text-primary" id="mobile-menu-button">
+<span class="material-symbols-outlined">menu</span>
+</button>
 </div>
-</header>
+</div>
+</header><div class="fixed inset-0 z-[60] bg-surface flex flex-col hidden" id="mobile-menu-overlay">
+<div class="flex justify-between items-center h-16 px-gutter border-b border-outline-variant">
+<a class="font-headline-sm text-headline-sm tracking-tighter font-bold text-primary uppercase" href="#">STRUCBUILD</a>
+<button class="p-2 text-primary" id="close-mobile-menu">
+<span class="material-symbols-outlined">close</span>
+</button>
+</div>
+<nav class="flex flex-col p-gutter gap-8 mt-8">
+<a class="font-headline-md text-headline-md text-secondary hover:text-primary transition-colors" href="#">Installations</a>
+<a class="font-headline-md text-headline-md text-primary" href="#">Portfolio</a>
+<a class="font-headline-md text-headline-md text-secondary hover:text-primary transition-colors" href="#">Materials</a>
+</nav>
+<div class="mt-auto p-gutter border-t border-outline-variant">
+<button class="w-full bg-primary text-on-primary font-label-caps text-label-caps py-4 hover:bg-surface-container-low hover:text-primary border border-primary transition-all duration-200">
+            Contact Us
+        </button>
+</div>
+</div>
 <main class="pt-24 pb-section-gap">
 <!-- SECTION: DOORS -->
 <section class="max-w-container-max mx-auto px-gutter mb-section-gap">
@@ -133,7 +154,7 @@
 <!-- Obsidian Pivot -->
 <div class="md:col-span-8 group">
 <div class="aspect-[16/9] overflow-hidden bg-surface-container-low">
-<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="A massive, minimalist black pivot door integrated into a modern concrete architectural facade. The lighting is harsh and dramatic, highlighting the sleek texture of the matte black finish and the precision of the steel frame. The surrounding environment is a clean, white-walled courtyard under a bright midday sun, emphasizing structural clarity." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAPl-E7dp1vGihWKrz_EW0vUBsuGBHdX_ShAb3AxPgmM_CfnjTGLqwfZwoyKv8YLNb06T4wvpEO-5jGqVnctAGXllIjqp1kaLAVZ9rsHahoXwcdxs4vTJaNntVD0qtH1HCeURDlmsU3xUamW6r6IgWGzVBHF0nYScoUiTOKX5RHBnOAxmdm--VmtNSux8ogQYSuOT8ci6pG00xJx2ifYTBNqLVkKKuA4xDWx4pTiU1BlqiHBWhvEfEJMrONmUxLRn3dKc73744QSap4"/>
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="A massive, minimalist black pivot door integrated into a modern concrete architectural facade." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAPl-E7dp1vGihWKrz_EW0vUBsuGBHdX_ShAb3AxPgmM_CfnjTGLqwfZwoyKv8YLNb06T4wvpEO-5jGqVnctAGXllIjqp1kaLAVZ9rsHahoXwcdxs4vTJaNntVD0qtH1HCeURDlmsU3xUamW6r6IgWGzVBHF0nYScoUiTOKX5RHBnOAxmdm--VmtNSux8ogQYSuOT8ci6pG00xJx2ifYTBNqLVkKKuA4xDWx4pTiU1BlqiHBWhvEfEJMrONmUxLRn3dKc73744QSap4"/>
 </div>
 <div class="mt-unit flex justify-between items-start">
 <div>
@@ -146,7 +167,7 @@
 <!-- Steel Portal -->
 <div class="md:col-span-4 group">
 <div class="aspect-[3/4] overflow-hidden bg-surface-container-low">
-<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="A tall, slender steel entry portal with industrial minimalist details. The door is set within a deep-recessed brick wall, casting strong shadows that accentuate its geometric form. Professional architectural photography style with a cool, muted color palette and soft diffused lighting from an overcast sky." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDAaokTrqaIEwRjAcsVVw9N9RX33qH-wCWwAJ4ZDKiwYtb7pDTom1Nkm6jbEhMcGLsp1SDA6wV3zZFyDCpyqpBBzrXfVNgCUEHiLqFPJAHw2C-uX4koRDHR0MkhBSmVl3LP9hVtHirdJAPWRTNY938GBVtsthtNMZNw-hRDFmVov64Zcen3VjOhC1ytZRa9hKyN2SbwSHoF0KN3Lt5cpKCYjYraar3pb7lZFUJ1psh45KpyIIDXCj3VtnUZ4I8rOq8yMUtMx6WNfbpq"/>
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="A tall, slender steel entry portal with industrial minimalist details." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDAaokTrqaIEwRjAcsVVw9N9RX33qH-wCWwAJ4ZDKiwYtb7pDTom1Nkm6jbEhMcGLsp1SDA6wV3zZFyDCpyqpBBzrXfVNgCUEHiLqFPJAHw2C-uX4koRDHR0MkhBSmVl3LP9hVtHirdJAPWRTNY938GBVtsthtNMZNw-hRDFmVov64Zcen3VjOhC1ytZRa9hKyN2SbwSHoF0KN3Lt5cpKCYjYraar3pb7lZFUJ1psh45KpyIIDXCj3VtnUZ4I8rOq8yMUtMx6WNfbpq"/>
 </div>
 <div class="mt-unit">
 <h3 class="font-headline-sm text-headline-sm uppercase">Steel Portal</h3>
@@ -156,7 +177,7 @@
 <!-- Heritage Oak -->
 <div class="md:col-span-4 group">
 <div class="aspect-square overflow-hidden bg-surface-container-low">
-<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="A warm Heritage Oak door system with vertical grain detail and custom bronze hardware. The scene is lit by warm, golden hour sunlight filtering through nearby foliage, creating a peaceful and refined atmosphere. The aesthetic is organic minimalism, blending natural materials with sharp, clean lines." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDl1OEO1YB5kWj1OIK0ppd9IhLRB_TKQ7-fFOAI_HplbAMRSxjQ224-GQw6zXLN1vegisXX07FxlOTgbQPy89lsUjejDXYbtND-My6nXP-Z9AFYcfjSCi7mQAKv2UbqkrsErqkhiHRdLeRsD0y3wUhDTU1VSm39kDvTHsMStWGOHrVtPHKVr4rd8kEpATYuK1Clw6qUJ860KhmhQICDdPfVUfjaQtLlg3IkomovvByDAp1aOiaV83xpSTqwQOK3MDDTVQdPjFDdNPq0"/>
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="A warm Heritage Oak door system with vertical grain detail." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDl1OEO1YB5kWj1OIK0ppd9IhLRB_TKQ7-fFOAI_HplbAMRSxjQ224-GQw6zXLN1vegisXX07FxlOTgbQPy89lsUjejDXYbtND-My6nXP-Z9AFYcfjSCi7mQAKv2UbqkrsErqkhiHRdLeRsD0y3wUhDTU1VSm39kDvTHsMStWGOHrVtPHKVr4rd8kEpATYuK1Clw6qUJ860KhmhQICDdPfVUfjaQtLlg3IkomovvByDAp1aOiaV83xpSTqwQOK3MDDTVQdPjFDdNPq0"/>
 </div>
 <div class="mt-unit">
 <h3 class="font-headline-sm text-headline-sm uppercase">Heritage Oak</h3>
@@ -166,7 +187,7 @@
 <!-- Panorama Slide -->
 <div class="md:col-span-8 group">
 <div class="aspect-[21/9] overflow-hidden bg-surface-container-low">
-<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="Ultra-wide panoramic sliding glass doors opening onto a minimalist stone terrace. The frame is nearly invisible, maximizing the view of a serene mountain landscape. High-key lighting and a neutral palette create a sense of boundless space and high-end architectural luxury." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAVfVvzXOEp-d0weFRNhpflIFVOzJOT41khVO-sSwQ9HQy7i3GhBx1eCStpFnaDULzFGDjvFuagHtmLsH-V3CAfNdSqNEzv6WetD-M-9K9TKmDUmuuChL_3R5aaOsE5xYdgkFNgc4oueUoI6xTO1iOvseuGU7j7cKlZ4eBT1STYPOddw04gl2rdL7QOlqJbV5H7PIX0PiQ4pNMBPtMcgIvgHNTZ-fZkQEdktUDvAeIvKVEvYN5s_c0xoV-ZEI29Nw8p6yl1Joz4omT5"/>
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="Ultra-wide panoramic sliding glass doors opening onto a minimalist stone terrace." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAVfVvzXOEp-d0weFRNhpflIFVOzJOT41khVO-sSwQ9HQy7i3GhBx1eCStpFnaDULzFGDjvFuagHtmLsH-V3CAfNdSqNEzv6WetD-M-9K9TKmDUmuuChL_3R5aaOsE5xYdgkFNgc4oueUoI6xTO1iOvseuGU7j7cKlZ4eBT1STYPOddw04gl2rdL7QOlqJbV5H7PIX0PiQ4pNMBPtMcgIvgHNTZ-fZkQEdktUDvAeIvKVEvYN5s_c0xoV-ZEI29Nw8p6yl1Joz4omT5"/>
 </div>
 <div class="mt-unit flex justify-between items-start">
 <div>
@@ -174,25 +195,6 @@
 <p class="font-body-sm text-body-sm text-secondary">Slim-Profile Aluminum / Low-E Glazing</p>
 </div>
 <span class="font-label-caps text-label-caps py-1 px-2 border border-outline-variant">SL-42</span>
-</div>
-</div>
-<!-- Linear Series & Bronze Grandee -->
-<div class="md:col-span-6 group">
-<div class="aspect-[4/5] overflow-hidden bg-surface-container-low">
-<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="A minimalist door from the Linear Series featuring horizontal slats of dark walnut and brushed metal. The setting is an indoor hallway with soft, directional lighting that emphasizes the rhythmic texture of the wood. The mood is sophisticated, professional, and strictly architectural." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB0hnXHDtrDbsbgFlujGgNBPS0DHQPtWA6mQG9_-jFvpOjHBTYBiEJlKKK-HnEdUl96Bns7Qw3AhhstrGXmKwtX9WkCnKl74RR-Pv5WKdeAujhhXEWSN9JyKVJim2soJIqN1a_oV1grzcL39HUK5qrdvE-vPBYegvt3N8w_AfvOE7lhQFUVGzOEBH9Z3u4oE04UHCRvaj-wP3sZoeLwxpAZUzb6W63wmPxgDjBgTVaz2t4-Q7wfqYFEWW2tIyu2lSIePg_m0qklkDPy"/>
-</div>
-<div class="mt-unit">
-<h3 class="font-headline-sm text-headline-sm uppercase">Linear Series</h3>
-<p class="font-body-sm text-body-sm text-secondary">Walnut Slats / Hidden Hinges</p>
-</div>
-</div>
-<div class="md:col-span-6 group">
-<div class="aspect-[4/5] overflow-hidden bg-surface-container-low">
-<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="The Bronze Grandee door, a massive slab of weathered bronze with a subtle green patina, standing as the focal point of a modern brutalist home. The lighting is dramatic and moody, with deep shadows emphasizing the heavy weight and permanence of the metal. Architectural precision is evident in every seam." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCoYYYwYb650Dwx8WToDX4XdcHUcqLRYUImS8YGQrkzSXDRcsKVWwYLugaa8BKbS72GZJeHiqNWoJ9HcR4F_BWh4REYxWbPB3XOT4IbqXoC1YhnH3s9In3ptXkoR96mhdlHis5CQZanhDU2VwoaNZsPeQ8cmCtgqOg79Jf_xKImkQ5PwvyIJBTJZhJrdIP1Wc75b6HoDDfmX8jpXygQaFE3B2XrGpC_7lD3_CQx2B3qdIS30H2LbAHr7Yj3UsRHWgmJZ4m6NfcCAVuU"/>
-</div>
-<div class="mt-unit">
-<h3 class="font-headline-sm text-headline-sm uppercase">Bronze Grandee</h3>
-<p class="font-body-sm text-body-sm text-secondary">Cast Bronze / Hand-Polished Edge</p>
 </div>
 </div>
 </div>
@@ -206,7 +208,7 @@
 <div class="grid grid-cols-1 md:grid-cols-12 gap-gutter">
 <div class="md:col-span-5 group">
 <div class="aspect-[4/6] overflow-hidden bg-surface-container-low">
-<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="A Slimline Fixed window frame in a minimalist bedroom. The window frames a single, perfectly centered tree outside. The interior is bathed in soft, natural light, highlighting the clean white walls and sharp architectural lines. The aesthetic is quiet, refined, and deeply focused." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCTJjrDoWEsCo8cMCfAFH1KClJUVJZNzstrOFTZHyxC6JeOby98YnzHnnImRCnZS-OnMVeih3Y4LXKgOx8feeqmPINC3aQ8sBmeH5IDKr0gn-6zXSEdhxVSYaeibkPdcfgay7Fq7cqj06D7fx8z-RHTGyd3--Zl_Mr5KTXKBpjJVFR_OmsIg2xZKsJhHksr1iyvc-V81QPXFABYUpqIGxM6bJ4nU_i0gIoSb3SgOsGzvwNZeQpBMZ0s7CCqsY-n6E9sWWwWQ0sFofnT"/>
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="A Slimline Fixed window frame in a minimalist bedroom." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCTJjrDoWEsCo8cMCfAFH1KClJUVJZNzstrOFTZHyxC6JeOby98YnzHnnImRCnZS-OnMVeih3Y4LXKgOx8feeqmPINC3aQ8sBmeH5IDKr0gn-6zXSEdhxVSYaeibkPdcfgay7Fq7cqj06D7fx8z-RHTGyd3--Zl_Mr5KTXKBpjJVFR_OmsIg2xZKsJhHksr1iyvc-V81QPXFABYUpqIGxM6bJ4nU_i0gIoSb3SgOsGzvwNZeQpBMZ0s7CCqsY-n6E9sWWwWQ0sFofnT"/>
 </div>
 <div class="mt-unit">
 <h3 class="font-headline-sm text-headline-sm uppercase">Slimline Fixed</h3>
@@ -216,106 +218,13 @@
 <div class="md:col-span-7 flex flex-col gap-gutter">
 <div class="group">
 <div class="aspect-[16/7] overflow-hidden bg-surface-container-low">
-<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="A Panorama Unit window spanning an entire living room wall. Outside, a dusk city skyline is visible, its lights reflecting softly on the glass. The internal environment is dark and moody, with only essential task lighting, creating a high-contrast, luxurious atmosphere typical of modern penthouse design." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAcLrFd3aig5_MQm5-En2ZCGoj9HWmwaYSNfDqj0LzTNURD7UZQZgZrvkevVzbCTRj5Kzce56vZNkT5u4hkQgyDCBlYojO7R8orHRXpWG3vNVYkQx5nQqTXt49Td49ukR-x7Uuo7FG-ACYRfD7m13cINZzUGxNdrh-W1k9kMONieS_XAlgOhc8epPTiRY6YA1J-k14M6kIjPalF_4xYlQS2MDjiIkbL-9ynmfuDwoYX8VeCcIfmIrGr7l5A0ZvRJwcW3PGziAwHomNx"/>
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="A Panorama Unit window spanning an entire living room wall." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAcLrFd3aig5_MQm5-En2ZCGoj9HWmwaYSNfDqj0LzTNURD7UZQZgZrvkevVzbCTRj5Kzce56vZNkT5u4hkQgyDCBlYojO7R8orHRXpWG3vNVYkQx5nQqTXt49Td49ukR-x7Uuo7FG-ACYRfD7m13cINZzUGxNdrh-W1k9kMONieS_XAlgOhc8epPTiRY6YA1J-k14M6kIjPalF_4xYlQS2MDjiIkbL-9ynmfuDwoYX8VeCcIfmIrGr7l5A0ZvRJwcW3PGziAwHomNx"/>
 </div>
 <div class="mt-unit">
 <h3 class="font-headline-sm text-headline-sm uppercase">Panorama Unit</h3>
 <p class="font-body-sm text-body-sm text-secondary">Floor-to-Ceiling / High-Thermal Rating</p>
 </div>
 </div>
-<div class="grid grid-cols-2 gap-gutter">
-<div class="group">
-<div class="aspect-square overflow-hidden bg-surface-container-low">
-<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="Modular System windows arranged in a grid on a brick facade. The photography is strictly symmetrical and orthographic, highlighting the mathematical precision of the installation. Bright, even daylight ensures every detail of the steel frames is clearly visible." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA3DecD7nbix_FLJmkfmEgEFxE1P0qqOPJoCJxg46h6SLuL0o0DhghcRlzgEx-9-_3SxqxVuYWiGmFdXfbrY34GAYMyQFHaKCi6qZORsQu8AMDqhn5K6Za2hYjDABD0uiVGx0fGhNwyXhWGLaiQ9NrG2AhC0jCDh7lJaNVc_kK7SqjR2PDGc5-HxWcr2UMAE1bhmklIQHEAy4o-fLYv0pBvOsOhkPhWArGiMqMYaX2Igk6rhIKu6l9HCKybqOVf7GnSSIeuRQvIdQQI"/>
-</div>
-<div class="mt-unit">
-<h3 class="font-headline-sm text-headline-sm uppercase">Modular System</h3>
-</div>
-</div>
-<div class="group">
-<div class="aspect-square overflow-hidden bg-surface-container-low">
-<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="A Corner Glaze window solution where two glass panes meet seamlessly without a corner post. The view looks out onto a minimalist garden. The lighting is soft and neutral, emphasizing the transparency and lightness of the structural glass." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDBpIGG14ldN3cDitKi5SwfDSff95SLdlne8RmCBV--0PmlsQwCmR1CM7ZKMjNDtl_9STPFdCS6XjrJMb3if1CbFvCjuJoihg3X9ourXYJCAsf9r4szHtFJC9tz1dwgjxux3lmlOIlfrELWphYTEl_HdgFarBRcngkBXf8083qQsc64CPm2dx7jPg3HPp68a-y5XFb7fNJSLxs_p8NN2UBto7zJUl_enQc0QEDX-7mEEr9L_cv0syi1v78Qcqy37bxXJ5WX0-zI6duB"/>
-</div>
-<div class="mt-unit">
-<h3 class="font-headline-sm text-headline-sm uppercase">Corner Glaze</h3>
-</div>
-</div>
-</div>
-</div>
-</div>
-</section>
-<!-- SECTION: GATES -->
-<section class="max-w-container-max mx-auto px-gutter mb-section-gap">
-<div class="flex items-baseline justify-between border-b border-outline-variant pb-unit mb-margin-desktop">
-<h2 class="font-headline-lg text-headline-lg uppercase tracking-tight">GATES</h2>
-<span class="font-label-caps text-label-caps text-secondary">PERIMETER DEFINITION</span>
-</div>
-<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter">
-<div class="md:col-span-7 group">
-<div class="aspect-[16/9] overflow-hidden bg-surface-container-low">
-<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="The Titan Slide gate, a massive slab of dark grey textured concrete and steel. The gate is captured in motion, sliding along a hidden track. The scene is a high-security residential estate at twilight, with subtle floor-level lighting casting long, dramatic shadows against the structural form." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBiadaFQCfZCfaheTxuBBBrdQmv8xnYq6igXgDl7E--Z65Hx1deipTxLwd8bdpeiAIqYO_Ehd125fL1K9E0jbQPe7U-CoAvpaVdmXygYxn9udDwIfMr_ncQ0TtEqJxRbahVlOnxAlMkqN7yvnH_4XBy-uPR4x8n2pFH0BKoAER3oLfHTVIIeTZ-QOTIRC7b03MkZgAYCsrhj0tmz7XwWZKVm8a28vR4ShWCPba427NuWhyAGqZ-HiKn791Mxm1hloAkXr3_j_6Lo-om"/>
-</div>
-<div class="mt-unit">
-<h3 class="font-headline-sm text-headline-sm uppercase">Titan Slide</h3>
-<p class="font-body-sm text-body-sm text-secondary">Monolithic Concrete Slab / Silent Drive</p>
-</div>
-</div>
-<div class="md:col-span-5 group">
-<div class="aspect-square overflow-hidden bg-surface-container-low">
-<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="A Vertex Bifold gate with a complex geometric laser-cut pattern. Sunlight passes through the perforations, creating intricate shadow patterns on the driveway. The style is modern-industrial, with sharp angles and a clean, graphite-grey powder-coated finish." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBxbQtd7k9YuW-7WrHDyJr_MkzNsyToASqIWPWCvYd-8lJ_YL4w6ABKSvL0tF7LOySmdU41KApPMkGwqQ-TQKJPTennTqn8oLkgHOi_-uqJKKXpgq6BmvmbyB9rYz6G8fvIAv3iRffirEDbqthrRc_YQISYlgtIl9I3WFMYYj9uujrOhk-HNw5ZERAzIfadTNX-Zrcyule8Va30gtLDSy1dc0A-sAkwBAwPYe6Do5XzTVMjKyTv_TmFy8iTNZ29d45tRG_tk2JtNziq"/>
-</div>
-<div class="mt-unit">
-<h3 class="font-headline-sm text-headline-sm uppercase">Vertex Bifold</h3>
-<p class="font-body-sm text-body-sm text-secondary">Laser-Cut Aluminum / Space-Saving</p>
-</div>
-</div>
-<div class="md:col-span-6 group">
-<div class="aspect-video overflow-hidden bg-surface-container-low">
-<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="Secure Entry gate for a corporate headquarters. The design features thick vertical steel bars and integrated biometric scanners. The photo is taken from a low angle to emphasize the height and strength of the structure. Cool blue lighting gives the scene a technologically advanced feel." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCdQUSp9lfDhse1PCxgd_jGO_QJWaXtWSiUIxVyj5PSz4AHOtfJ3W_T8nGwSmHt_BYW9UD73YXsQjEx7v-WAoyYM5jBXBsFnuPM4HvJBz9xi_9-p9IVkd0bADZtfQiQooyhVTtjAmt8Np_fAeGtPr5aT9OfI7FawhKLjxneN9mQgHhpoJ-FtSwUg5auroIOLcqUFf7LqAPj0yM0qkD_G6UzGF_NXEHzFHVk1sNBkE6M0isdiuWF9c8SmXWwDBugoQTeXhOGG37L4GiB"/>
-</div>
-<div class="mt-unit">
-<h3 class="font-headline-sm text-headline-sm uppercase">Secure Entry</h3>
-<p class="font-body-sm text-body-sm text-secondary">High-Security Steel / Biometric Integration</p>
-</div>
-</div>
-<div class="md:col-span-6 group">
-<div class="aspect-video overflow-hidden bg-surface-container-low">
-<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="Echelon Swing gate made of polished stainless steel, reflecting the vibrant colors of a nearby sunset. The gate is perfectly aligned with a manicured lawn and a minimalist stone wall. The mood is one of quiet, expensive elegance and architectural perfection." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCwZWUdAbTbVwxcbedvPqVjBExjoJsLklaAk3e4P7Klt69YQB50-uoWUmaZx2F1YzyWiUjGz0R9NIq7Co9jBRYUadEmByDOvL31ZEh7-IJSIiegrJlBSPXbq9kxshJfHr8UEJTuY7W4AUw2DnTL3Jrjy3nTxlxPPAKGk-fB5NKtomSU1YntVt3ZYvH5oNrhE8OEmb0F6iK7MBG6pfsP2qngXfipv14S5C-AX1eE38NSBQb3N9lsSWX1VUmfmMeP20fXfg43OEfr8pCY"/>
-</div>
-<div class="mt-unit">
-<h3 class="font-headline-sm text-headline-sm uppercase">Echelon Swing</h3>
-<p class="font-body-sm text-body-sm text-secondary">Stainless Steel / Synchronized Actuators</p>
-</div>
-</div>
-</div>
-</section>
-<!-- SECTION: OTHERS -->
-<section class="max-w-container-max mx-auto px-gutter">
-<div class="flex items-baseline justify-between border-b border-outline-variant pb-unit mb-margin-desktop">
-<h2 class="font-headline-lg text-headline-lg uppercase tracking-tight">OTHERS</h2>
-<span class="font-label-caps text-label-caps text-secondary">BESPOKE HARDWARE</span>
-</div>
-<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
-<div class="group border-r border-outline-variant pr-gutter last:border-r-0">
-<div class="aspect-square overflow-hidden bg-surface-container-low mb-unit">
-<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="Close-up detail of a minimalist door handle made of brushed titanium. The handle is integrated into the door surface, appearing as a subtle sculptural element. High-contrast studio lighting emphasizes the fine metallic grain and the precision of the manufacturing." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCs9DD4YAuZ6SKzZtQ-fPfDRRzluq-FD7kzpG12KVcTQLkgiM4_0x40Neysfzo-SUmOCkLW8J_hmB8e7guzy_oCWaXYskcEqNPhkoUc0MJXEn-gV28Qdi1_UiC4abHawpVNbIZPCZ6H5QVGORDt2-zwDe7hVyOZXMSpAnCLsfyQCUOaeNS-dbUbJN3EiyFgzUQGnnHTAvdqAK12HwLw2bL09azNtQ0DIbWjU9rAuINPGNr-p5xbhRvrlujxmHiHY_X7Cq2l2ORiDcla"/>
-</div>
-<h3 class="font-headline-sm text-headline-sm uppercase">Titanium Hardware</h3>
-<p class="font-body-sm text-body-sm text-secondary">Custom Forged / Zero-Tolerance Fit</p>
-</div>
-<div class="group border-r border-outline-variant pr-gutter last:border-r-0">
-<div class="aspect-square overflow-hidden bg-surface-container-low mb-unit">
-<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="A architectural louvre system made of extruded aluminum. The louvres are angled to create a rhythmic play of light and shadow across a concrete wall. The scene is bright and airy, representing functional minimalist design used for climate control and privacy." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAtUL5MYe4htZLm60eFD4sYzFnftLkOInAvN90Oe8xLQ1tmjTbgorEEuByjF_YHwnGCLTKkpxJJuT6zx-VHJMy6Rub44S5zrb06ENZCA9gPHLwSDKA5uKHODEJ6tQ91roy52gu1d0D3ak9RuZAs-7NjuUwsCurDdZ4yhSRF_OM1VMOFHODRG4IA8zjT-czuO_ultlDchdMOiKLSyHGq2YFz0FDgozICMZpt6grBh0sTbmztTDfBCKTcN2_Bde70FVhQYEZqSXNCLzm5"/>
-</div>
-<h3 class="font-headline-sm text-headline-sm uppercase">Louvre Systems</h3>
-<p class="font-body-sm text-body-sm text-secondary">Solar Shading / Extruded Aluminum</p>
-</div>
-<div class="group">
-<div class="aspect-square overflow-hidden bg-surface-container-low mb-unit">
-<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="Interior glass partition walls in a minimalist office space. The glass is held by ultra-thin black steel frames that disappear into the floor and ceiling. The environment is impeccably clean, lit by cold white fluorescent lights, creating a space of absolute clarity." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB_9buAaADNRGNlRTczR1yAj3_AZv78py1Xjq-bnQpVm6PKM62s5HA2MU4XgluzfXvOPGj8X8YNkkgOZgWQtKOsBrJUbRpukH7Fc0YU-31jmlPQyEgdlO0Fs_8rh5qxQELIk8Sjg-kZGEUboihPJbXFlWAwbLCdYd3n4CNaFYl818r5BbVB39FVER5hM6-Ou0R_XN5bbbJePAetzHS4Wi1VcfPqrfQ9FieHT6-bOMKbwJGXSLgyuwJ8cim94b52CBX_lg7M0ncxjXlz"/>
-</div>
-<h3 class="font-headline-sm text-headline-sm uppercase">Glass Partitions</h3>
-<p class="font-body-sm text-body-sm text-secondary">Acoustic Rated / Frameless Transitions</p>
 </div>
 </div>
 </section>
@@ -333,12 +242,6 @@
 <a class="font-body-sm text-body-sm text-secondary hover:text-primary transition-colors" href="mailto:contact@strucbuild.com">contact@strucbuild.com</a>
 <a class="font-body-sm text-body-sm text-secondary hover:text-primary transition-colors" href="tel:+1800STRUC">+1 (800) STRUC-01</a>
 </div>
-<div class="flex flex-col gap-2">
-<span class="font-label-caps text-label-caps text-primary">Legal</span>
-<a class="font-body-sm text-body-sm text-secondary hover:text-primary transition-colors" href="#">Privacy Policy</a>
-<a class="font-body-sm text-body-sm text-secondary hover:text-primary transition-colors" href="#">Terms of Service</a>
-<a class="font-body-sm text-body-sm text-secondary hover:text-primary transition-colors" href="#">Accessibility</a>
-</div>
 </div>
 </div>
 <div class="max-w-container-max mx-auto px-gutter pb-unit">
@@ -347,4 +250,28 @@
             </p>
 </div>
 </footer>
-</body></html>
+<script>
+    const mobileMenuButton = document.getElementById('mobile-menu-button');
+    const closeMobileMenuButton = document.getElementById('close-mobile-menu');
+    const mobileMenuOverlay = document.getElementById('mobile-menu-overlay');
+
+    function toggleMenu() {
+        mobileMenuOverlay.classList.toggle('hidden');
+        if (!mobileMenuOverlay.classList.contains('hidden')) {
+            document.body.style.overflow = 'hidden';
+        } else {
+            document.body.style.overflow = '';
+        }
+    }
+
+    mobileMenuButton.addEventListener('click', toggleMenu);
+    closeMobileMenuButton.addEventListener('click', toggleMenu);
+
+    // Close menu when clicking links
+    mobileMenuOverlay.querySelectorAll('nav a').forEach(link => {
+        link.addEventListener('click', () => {
+            mobileMenuOverlay.classList.add('hidden');
+            document.body.style.overflow = '';
+        });
+    });
+</script></body></html>
