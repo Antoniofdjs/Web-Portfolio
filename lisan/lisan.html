@@ -1,1 +1,286 @@
-hh
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;family=Geist:wght@100;300;400;500;700;900&amp;family=JetBrains+Mono:wght@100;300;400;500;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            background-color: #131313;
+            color: #e5e2e1;
+            font-family: 'Geist', sans-serif;
+            overflow-x: hidden;
+        }
+        .glow-border:hover {
+            box-shadow: 0 0 15px rgba(0, 218, 248, 0.3);
+            border-color: #00daf8;
+        }
+        .technical-gradient {
+            background: linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.85) 100%);
+        }
+        /* Fix for potential horizontal scroll */
+        .container-fix {
+            max-width: 100vw;
+            overflow-x: hidden;
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "primary-fixed": "#a5eeff",
+                      "on-primary-container": "#005f6d",
+                      "primary-fixed-dim": "#00daf8",
+                      "surface-bright": "#3a3939",
+                      "outline": "#859397",
+                      "on-surface": "#e5e2e1",
+                      "on-secondary-container": "#b4b9bf",
+                      "tertiary": "#e8e8e8",
+                      "on-tertiary": "#2f3131",
+                      "on-secondary-fixed-variant": "#43474c",
+                      "error-container": "#93000a",
+                      "surface-container-low": "#1c1b1b",
+                      "surface-tint": "#00daf8",
+                      "secondary-fixed-dim": "#c3c7cd",
+                      "secondary": "#c3c7cd",
+                      "on-error-container": "#ffdad6",
+                      "on-tertiary-fixed": "#1a1c1c",
+                      "tertiary-container": "#cccccc",
+                      "surface-dim": "#131313",
+                      "outline-variant": "#3b494c",
+                      "primary-container": "#00e0ff",
+                      "on-tertiary-container": "#555657",
+                      "background": "#131313",
+                      "primary": "#baf2ff",
+                      "on-background": "#e5e2e1",
+                      "surface-variant": "#353534",
+                      "tertiary-fixed": "#e2e2e2",
+                      "surface": "#131313",
+                      "on-secondary": "#2c3136",
+                      "inverse-surface": "#e5e2e1",
+                      "inverse-primary": "#006877",
+                      "surface-container-highest": "#353534",
+                      "surface-container-high": "#2a2a2a",
+                      "on-secondary-fixed": "#171c20",
+                      "surface-container": "#201f1f",
+                      "on-primary-fixed": "#001f25",
+                      "on-error": "#690005",
+                      "on-surface-variant": "#bac9cd",
+                      "tertiary-fixed-dim": "#c6c6c7",
+                      "inverse-on-surface": "#313030",
+                      "surface-container-lowest": "#0e0e0e",
+                      "on-primary": "#00363f",
+                      "secondary-container": "#454a4f",
+                      "on-tertiary-fixed-variant": "#454747",
+                      "secondary-fixed": "#dfe3e9",
+                      "on-primary-fixed-variant": "#004e5a",
+                      "error": "#ffb4ab"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "unit": "4px",
+                      "margin-desktop": "48px",
+                      "gutter": "16px",
+                      "margin-mobile": "16px",
+                      "container-max": "1440px"
+              },
+              "fontFamily": {
+                      "headline-lg": ["Space Grotesk"],
+                      "body-md": ["Geist"],
+                      "label-caps": ["Space Grotesk"],
+                      "display-lg": ["Space Grotesk"],
+                      "data-mono": ["JetBrains Mono"],
+                      "headline-lg-mobile": ["Space Grotesk"]
+              },
+              "fontSize": {
+                      "headline-lg": ["32px", {"lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "600"}],
+                      "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                      "label-caps": ["12px", {"lineHeight": "1", "letterSpacing": "0.1em", "fontWeight": "700"}],
+                      "display-lg": ["48px", {"lineHeight": "1.1", "letterSpacing": "-0.04em", "fontWeight": "700"}],
+                      "data-mono": ["14px", {"lineHeight": "1.4", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                      "headline-lg-mobile": ["24px", {"lineHeight": "1.2", "fontWeight": "600"}]
+              }
+            },
+          },
+        }
+    </script>
+</head>
+<body class="bg-background text-on-background selection:bg-primary selection:text-on-primary container-fix">
+<!-- TopAppBar -->
+<nav class="fixed top-0 w-full z-50 flex justify-between items-center px-gutter py-4 bg-background/95 backdrop-blur-sm border-b-2 border-outline-variant transition-all duration-150 ease-in-out">
+<div class="flex items-center gap-4">
+<img alt="SOLIVAN Logo" class="h-8 md:h-10 w-auto object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA8pCfsTFHUbEvSjbFz9Z45UBs3UBQbEuSESPobSrpDplj-Tm_JwlKdxCHVdTh2MshQ-bV1f2TjavzQVfm0Q0gyjt3F2BpbHTQAmU0RJokGjSsriu5J7Wo3q8Z_qGdVcdo9Xd7YIYvl_XFla1PpGa59PaFqgZEC2fh1-P7QSuf312GwMtQ77KXNRStKeysaahxsTJviZ_99CxmgXGtgEZ07BCy0vJGlrtu00Tah0l9ygM2Wr4PDIZVUKuKjZ2z-Lj4mDQAOXkvObOk"/>
+<span class="font-display-lg text-xl md:text-headline-lg font-bold text-primary tracking-widest uppercase">SOLIVAN</span>
+</div>
+<div class="hidden md:flex gap-8">
+<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-colors" href="#">HOME</a>
+<a class="font-label-caps text-label-caps text-primary border-b-2 border-primary font-bold" href="#">WORK</a>
+<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-colors" href="#">SPECS</a>
+<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-colors" href="#">CONTACT</a>
+</div>
+</nav>
+<main class="pt-24 pb-20 px-gutter max-w-container-max mx-auto overflow-x-hidden">
+<!-- Header Section -->
+<header class="mb-12 border-l-4 border-primary pl-4 md:pl-6">
+<h1 class="font-display-lg text-2xl md:text-display-lg uppercase tracking-tighter mb-2 break-words">PROJECT ARCHIVE // TRANSFORMATIONS</h1>
+<p class="font-data-mono text-xs md:text-data-mono text-on-surface-variant max-w-2xl">A technical breakdown of recent restoration and protection maneuvers on high-velocity automotive assets. Calibrated for maximum gloss and aerodynamic efficiency.</p>
+</header>
+<!-- Bento Grid Gallery -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-4">
+<!-- Featured Project: Lamborghini -->
+<div class="group relative overflow-hidden bg-surface-container-low border border-outline-variant glow-border transition-all md:col-span-12">
+<div class="aspect-[4/3] md:aspect-[16/9] w-full">
+<img alt="Lamborghini Huracan Performante" class="w-full h-full object-cover transition-all duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCr9_hTr0oRYP1BRBehr-ze3qTj1MAsS7GTyQQLHwr2Wyu-LUQSXVJi5D93pqDrDeg0WAP1r_g6EWp2gpil95Pw6cisSEpZW-80gipE0V1sFAOpCFJv28LyxSI9c2d36trr_6SEUV8exTr0VLV2mdSN24uA7n5kVHvgArv5AKUE_bAiBTb1bZzX3wuJVH4U7ismRLBX3ez2gJTKRz7_P-YLHIhPRRO9ldGVI4LbkUk-CvD4L5E7pn8ZENsFA04V2oKGGdsXius7tcs"/>
+</div>
+<div class="absolute top-0 left-0 bg-primary text-on-primary font-label-caps text-[10px] md:text-label-caps px-4 py-1">
+                    ASSET ID: 099-HURACAN
+                </div>
+<div class="absolute bottom-0 left-0 w-full technical-gradient p-4 md:p-6">
+<div class="flex flex-col md:flex-row justify-between items-start md:items-end gap-4">
+<div class="max-w-full">
+<h3 class="font-headline-lg text-lg md:text-headline-lg text-white uppercase mb-2 leading-tight">LAMBORGHINI HURACÁN PERFORMANTE</h3>
+<div class="flex flex-wrap gap-2">
+<span class="bg-black/60 px-2 py-1 border border-primary/30 font-data-mono text-[9px] md:text-[10px] text-primary">FULL PPF STEALTH</span>
+<span class="bg-black/60 px-2 py-1 border border-primary/30 font-data-mono text-[9px] md:text-[10px] text-primary">9H CERAMIC COATING</span>
+</div>
+</div>
+<div class="flex w-full md:w-auto gap-4 md:gap-8 bg-black/40 backdrop-blur-md p-3 md:p-4 border-l-2 border-primary">
+<div class="flex flex-col">
+<span class="text-[9px] font-label-caps text-on-secondary-container">LABOR HOURS</span>
+<span class="font-data-mono text-xl md:text-headline-lg text-primary">72.4</span>
+</div>
+<div class="flex flex-col">
+<span class="text-[9px] font-label-caps text-on-secondary-container">AERODYNAMIC GAIN</span>
+<span class="font-data-mono text-xl md:text-headline-lg text-primary">+2.4%</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Project 2: Ferrari -->
+<div class="md:col-span-4 group relative overflow-hidden bg-surface-container-low border border-outline-variant glow-border transition-all">
+<div class="aspect-square w-full">
+<img alt="Ferrari F8 Tributo" class="w-full h-full object-cover transition-all duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAEZdTJzz2nXHdygx6870ZqbK02a_9dReIrCnF7KCFyiyNWu4JtERdQFw4e--QO2zt_VaVaYKmJI3ZrS0WM6pSR5yG0BC8HTabAVI8dXvQVxhd3JGF6v6ip_YXGjxd-VlMfjGpYtzHTGr9FGQdcXpABOK05H-b8Vt4kIJBdpG2cM-vdBfRhF4Wa5VhCsWMA8aDDOh11ikI4K83A7txy8zQ0xL60yTRwtTEdyiRi4dJpcGmCNH4mG0seNUuyeiZJ3R0Tzv0Ee-V8Y64"/>
+</div>
+<div class="p-4 bg-surface-container">
+<h4 class="font-headline-lg text-base md:text-lg uppercase mb-1">FERRARI F8 TRIBUTO</h4>
+<div class="flex justify-between items-center">
+<span class="font-data-mono text-[10px] md:text-xs text-on-surface-variant uppercase">MULTI-STAGE POLISH</span>
+<span class="font-data-mono text-primary text-sm md:text-base">42H</span>
+</div>
+</div>
+</div>
+<!-- Project 3: Porsche -->
+<div class="md:col-span-4 group relative overflow-hidden bg-surface-container-low border border-outline-variant glow-border transition-all">
+<div class="aspect-square w-full">
+<img alt="Porsche 911 GT3" class="w-full h-full object-cover transition-all duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuChXQmo-ijL_BnGclcBfyIe6GLh5miwUcqkQIx4ZcU7fj83QpOqQZR962C5zZvf2UB_WiLy87GkdlAPSSzblousgMYJqvaLMlia-2zDUKrsCNqNzfUVTn3_2WyjCsCMV9-gQrM8Sr5LDbJfjJBqEtfC9mZjsCLzRCI0RNXtP5TwGxqKTv-1qWWMjSXeQ4714MA7-DECeE5YAo5epSet8gKqjy8B8oJTt-r6I6hx0kQwewrTvcYzNtNQpC0zL6FF-hap_Ub3nxJvkD0"/>
+</div>
+<div class="p-4 bg-surface-container">
+<h4 class="font-headline-lg text-base md:text-lg uppercase mb-1">PORSCHE 911 GT3 RS</h4>
+<div class="flex justify-between items-center">
+<span class="font-data-mono text-[10px] md:text-xs text-on-surface-variant uppercase">TRACK PROTECTION</span>
+<span class="font-data-mono text-primary text-sm md:text-base">55H</span>
+</div>
+</div>
+</div>
+<!-- Project 4: Aston Martin -->
+<div class="md:col-span-4 group relative overflow-hidden bg-surface-container-low border border-outline-variant glow-border transition-all">
+<div class="aspect-square w-full">
+<img alt="Aston Martin Vantage" class="w-full h-full object-cover transition-all duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDI_JSfyZXRMGB7uqTpw1QsxsmNVsD3btbmUmqNKkrz6QSoTKenREMlyc0jnZUOYUgA4rA3nK9n2y9OSTSexLNHcgNpUxskf4SdvRJ2hhucCnr8KzkoPns0Uj8pAbjrLgQOkicccNOnlsiH1smbDzu7IfCVdyY8xAC95NXl1kvVEjR72i9j2uFXSqOizlGb-wt0KAiRO_o4xwqDRPlM8vk89wdhMnJqbqmucVQFE2m8nCwlwyXKrsQ-Jp11KDLhMZfx9vCRbdUlXo8"/>
+</div>
+<div class="p-4 bg-surface-container">
+<h4 class="font-headline-lg text-base md:text-lg uppercase mb-1">ASTON MARTIN VANTAGE</h4>
+<div class="flex justify-between items-center">
+<span class="font-data-mono text-[10px] md:text-xs text-on-surface-variant uppercase">FULL RESTORATION</span>
+<span class="font-data-mono text-primary text-sm md:text-base">110H</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Density Module: Detail View -->
+<section class="mt-12 bg-surface-container-lowest border-2 border-outline-variant p-4 md:p-8 flex flex-col md:flex-row gap-8 items-center overflow-x-hidden">
+<div class="w-full md:w-1/2">
+<img alt="Technical Detail" class="w-full border border-outline-variant" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD81-B3aQ1YtreM0vum-i8RFfBvVQKwC6sSWmB-7SSQ89zwLS4b2EGA-IePZg2PqZSLmqMaOaRLi_QNhqzl5j-VzqDuHX79xAkN_0SK2tt22kgXyMNAI0OOSmc4Tu--icYCPeZpwbHwG8eGWE2FulI2cHJxb2ZAlZguaoR0i4A2VYPL40fXY8cKWA_neuqqjo8P-JARmhbPFE12fj9fztCvb2F-mg1lSNwoj77Y0ScnSR6ffLIiim0B7h8QmoB52SLDJgP9zqoNFWs"/>
+</div>
+<div class="w-full md:w-1/2">
+<div class="flex items-center gap-2 mb-4">
+<div class="w-3 h-3 md:w-4 md:h-4 bg-primary"></div>
+<span class="font-label-caps text-[10px] md:text-label-caps tracking-widest text-primary">MICRO-PRECISION CAPABILITY</span>
+</div>
+<h2 class="font-display-lg text-xl md:text-headline-lg uppercase mb-6 leading-tight">THE SCIENCE OF<br/>PERFECTION</h2>
+<div class="grid grid-cols-2 gap-3 md:gap-4 mb-8">
+<div class="bg-surface-container p-3 md:p-4 border border-outline-variant">
+<span class="material-symbols-outlined text-primary mb-2 text-xl" data-icon="lens_blur">lens_blur</span>
+<h5 class="font-label-caps text-[9px] text-on-secondary-container mb-1 uppercase">GLOSS FACTOR</h5>
+<p class="font-data-mono text-lg md:text-xl">+42%</p>
+</div>
+<div class="bg-surface-container p-3 md:p-4 border border-outline-variant">
+<span class="material-symbols-outlined text-primary mb-2 text-xl" data-icon="shield">shield</span>
+<h5 class="font-label-caps text-[9px] text-on-secondary-container mb-1 uppercase">HARDNESS</h5>
+<p class="font-data-mono text-lg md:text-xl">10H+</p>
+</div>
+<div class="bg-surface-container p-3 md:p-4 border border-outline-variant">
+<span class="material-symbols-outlined text-primary mb-2 text-xl" data-icon="water_drop">water_drop</span>
+<h5 class="font-label-caps text-[9px] text-on-secondary-container mb-1 uppercase">CONTACT ANGLE</h5>
+<p class="font-data-mono text-lg md:text-xl">120°</p>
+</div>
+<div class="bg-surface-container p-3 md:p-4 border border-outline-variant">
+<span class="material-symbols-outlined text-primary mb-2 text-xl" data-icon="layers">layers</span>
+<h5 class="font-label-caps text-[9px] text-on-secondary-container mb-1 uppercase">COAT DEPTH</h5>
+<p class="font-data-mono text-lg md:text-xl">5μm</p>
+</div>
+</div>
+<button class="w-full md:w-auto px-6 md:px-8 py-4 bg-primary text-black font-label-caps text-label-caps hover:bg-white transition-colors flex items-center justify-center gap-4">
+                    TECHNICAL PDF
+                    <span class="material-symbols-outlined" data-icon="download">download</span>
+</button>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full py-12 px-gutter flex flex-col md:flex-row justify-between items-center gap-8 bg-surface border-t-4 border-primary overflow-x-hidden">
+<div class="flex items-center gap-4">
+<img alt="SOLIVAN Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA8pCfsTFHUbEvSjbFz9Z45UBs3UBQbEuSESPobSrpDplj-Tm_JwlKdxCHVdTh2MshQ-bV1f2TjavzQVfm0Q0gyjt3F2BpbHTQAmU0RJokGjSsriu5J7Wo3q8Z_qGdVcdo9Xd7YIYvl_XFla1PpGa59PaFqgZEC2fh1-P7QSuf312GwMtQ77KXNRStKeysaahxsTJviZ_99CxmgXGtgEZ07BCy0vJGlrtu00Tah0l9ygM2Wr4PDIZVUKuKjZ2z-Lj4mDQAOXkvObOk"/>
+<span class="font-display-lg text-lg md:text-headline-lg font-bold text-primary tracking-widest">SOLIVAN</span>
+</div>
+<div class="flex flex-wrap justify-center gap-6 md:gap-8">
+<a class="font-data-mono text-[10px] md:text-data-mono text-on-surface-variant hover:text-primary transition-opacity duration-200" href="#">PRIVACY</a>
+<a class="font-data-mono text-[10px] md:text-data-mono text-on-surface-variant hover:text-primary transition-opacity duration-200" href="#">TERMS</a>
+<a class="font-data-mono text-[10px] md:text-data-mono text-on-surface-variant hover:text-primary transition-opacity duration-200" href="#">TECHNICAL DATA</a>
+</div>
+<div class="font-data-mono text-[10px] md:text-data-mono text-on-surface-variant uppercase text-center">
+            © 2024 SOLIVAN ENGINE. ALL RIGHTS RESERVED.
+        </div>
+</footer>
+<!-- Bottom Navigation (Mobile) -->
+<nav class="md:hidden fixed bottom-0 left-0 w-full flex justify-around items-center bg-background py-2 border-t-2 border-outline-variant z-50">
+<a class="flex flex-col items-center justify-center text-on-secondary-container p-2 active:bg-secondary-container scale-95 transition-transform" href="#">
+<span class="material-symbols-outlined" data-icon="home">home</span>
+<span class="font-label-caps text-[10px]">HOME</span>
+</a>
+<a class="flex flex-col items-center justify-center text-primary bg-primary-container/10 p-2 border-t-2 border-primary active:bg-secondary-container scale-95 transition-transform" href="#">
+<span class="material-symbols-outlined" data-icon="directions_car">directions_car</span>
+<span class="font-label-caps text-[10px]">WORK</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-secondary-container p-2 active:bg-secondary-container scale-95 transition-transform" href="#">
+<span class="material-symbols-outlined" data-icon="analytics">analytics</span>
+<span class="font-label-caps text-[10px]">SPECS</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-secondary-container p-2 active:bg-secondary-container scale-95 transition-transform" href="#">
+<span class="material-symbols-outlined" data-icon="contact_support">contact_support</span>
+<span class="font-label-caps text-[10px]">CONTACT</span>
+</a>
+</nav>
+</body></html>
